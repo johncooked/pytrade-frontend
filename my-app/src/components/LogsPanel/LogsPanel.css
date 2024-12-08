@@ -1,5 +1,6 @@
 .logs-panel {
     height: 100%;
     overflow-y: auto;
+    background-color: var(--secondary-bg-color);
     /* Other specific styles for LogsPanel */
 }

@@ -1,5 +1,6 @@
 /* AgentPanel.css */
 .agent-panel {
     height: 100%;
+    background-color: var(--primary-bg-color);
     /* Other specific styles for AgentPanel */
 }

@@ -1,13 +1,59 @@
-body {
+/*default fonts*/
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightgray;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/**/
+
+/* Light Theme Variables */
+:root {
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #f4f4f4;
+  --primary-text-color: #333333;
+  --secondary-text-color: #666666;
+  --accent-color: #007bff;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --font-body-light: 'Roboto', sans-serif;
+  --font-heading-light: 'Arial', sans-serif;
+  --font-button-light: 'Helvetica', sans-serif;
+
+  /* Default light theme values */
+  --font-body: var(--font-body-light);
+  --font-heading: var(--font-heading-light);
+  --font-button: var(--font-button-light);
+}
+
+/* Dark Theme Variables */
+[data-theme='dark'] {
+  --primary-bg-color: #1a1a1a;
+  --secondary-bg-color: #333333;
+  --primary-text-color: #f1f1f1;
+  --secondary-text-color: #bbbbbb;
+  --accent-color: #ff4081;
+  --button-bg-color: #ff4081;
+  --button-text-color: #ffffff;
+  --font-body-dark: 'Roboto', sans-serif;
+  --font-heading-dark: 'Arial', sans-serif;
+  --font-button-dark: 'Helvetica', sans-serif;
+
+  /* Default dark theme values */
+  --font-body: var(--font-body-dark);
+  --font-heading: var(--font-heading-dark);
+  --font-button: var(--font-button-dark);
 }
