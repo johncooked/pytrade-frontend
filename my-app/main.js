@@ -1,14 +1,16 @@
 const { app, BrowserWindow } = require('electron');
-const { todo } = require('node:test');
 const path = require('path');
 
 function createWindow() {
     const mainWindow = new BrowserWindow({
-        width: 1200,
-        height: 800,
+        title: "PyTrade",
+        width: 800,
+        height: 1000,
+        minWidth: 300,
+        minHeight: 400,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
-            nodeIntegration: true,
+            nodeIntegration: false,
             contextIsolation: true,
         }
     });

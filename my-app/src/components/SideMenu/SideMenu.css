@@ -1,0 +1,6 @@
+.side-menu {
+    height: 100%;
+    width: 250px;
+    overflow-y: auto;
+    /* Other specific styles for SideMenu */
+}
