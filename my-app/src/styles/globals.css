@@ -22,13 +22,16 @@ code {
 
 /* Light Theme Variables */
 :root {
-  --primary-bg-color: #ffffff;
-  --secondary-bg-color: #f4f4f4;
-  --primary-text-color: #333333;
-  --secondary-text-color: #666666;
-  --accent-color: #007bff;
-  --button-bg-color: #007bff;
-  --button-text-color: #ffffff;
+  --primary-color: #007AFF;
+  --secondary-color: #28A745;
+  --background-color: #F8F9FA;
+  --surface-color: #FFFFFF;
+  --on-background-color: #2C3E50;
+  --on-surface-color: #2C3E50;
+  --error-color: #E74C3C;
+  --on-error-color: #FFFFFF;
+  --border-color: #ccc;
+
   --font-body-light: 'Roboto', sans-serif;
   --font-heading-light: 'Arial', sans-serif;
   --font-button-light: 'Helvetica', sans-serif;
@@ -40,14 +43,17 @@ code {
 }
 
 /* Dark Theme Variables */
-[data-theme='dark'] {
-  --primary-bg-color: #1a1a1a;
-  --secondary-bg-color: #333333;
-  --primary-text-color: #f1f1f1;
-  --secondary-text-color: #bbbbbb;
-  --accent-color: #ff4081;
-  --button-bg-color: #ff4081;
-  --button-text-color: #ffffff;
+[data-theme="dark"] {
+  --primary-color: linear-gradient(to right, #6A1B9A, #2196F3);
+  --secondary-color: #18FFFF;
+  --background-color: #202020;
+  --surface-color: #1a1a1a;
+  --on-background-color: #EAEAEA;
+  --on-surface-color: #ABB2BF;
+  --error-color: #E53935;
+  --on-error-color: #FFFFFF;
+  --border-color: #2b2a2a;
+
   --font-body-dark: 'Roboto', sans-serif;
   --font-heading-dark: 'Arial', sans-serif;
   --font-button-dark: 'Helvetica', sans-serif;
@@ -56,4 +62,15 @@ code {
   --font-body: var(--font-body-dark);
   --font-heading: var(--font-heading-dark);
   --font-button: var(--font-button-dark);
+}
+
+/* Reusable styles*/
+.flex-container-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container-row {
+  display: flex;
+  flex-direction: row;
 }
