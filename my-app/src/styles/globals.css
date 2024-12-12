@@ -30,7 +30,7 @@ code {
   --on-surface-color: #2C3E50;
   --error-color: #E74C3C;
   --on-error-color: #FFFFFF;
-  --border-color: #ccc;
+  --border-color: #cccccc;
 
   --font-body-light: 'Roboto', sans-serif;
   --font-heading-light: 'Arial', sans-serif;
@@ -52,7 +52,7 @@ code {
   --on-surface-color: #ABB2BF;
   --error-color: #E53935;
   --on-error-color: #FFFFFF;
-  --border-color: #222224;
+  --border-color: #000000;
 
   --font-body-dark: 'Roboto', sans-serif;
   --font-heading-dark: 'Arial', sans-serif;
@@ -62,15 +62,4 @@ code {
   --font-body: var(--font-body-dark);
   --font-heading: var(--font-heading-dark);
   --font-button: var(--font-button-dark);
-}
-
-/* Reusable styles*/
-.flex-container-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-container-row {
-  display: flex;
-  flex-direction: row;
 }

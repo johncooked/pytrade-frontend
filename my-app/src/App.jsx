@@ -17,17 +17,17 @@ function App() {
 
     return (
         <div className="app">
-            <header className="header-container">
+            <header>
                 <Header theme={theme} setTheme={setTheme} />
             </header>
-            <aside className="side-menu-container">
+            <aside>
                 <SideMenu />
             </aside>
-            <main className="flex-container-col">
-                <div className="agent-panel-container">
+            <main>
+                <div className="main-agent-container">
                     <AgentPanel />
                 </div>
-                <div className="logs-panel-container">
+                <div className="main-logs-container">
                     <LogsPanel />
                 </div>
             </main>

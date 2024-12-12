@@ -2,3 +2,41 @@ header {
     background-color: var(--surface-color);
     border-bottom: 1px solid var(--border-color);
 }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.titlebar-menu-container {
+    display: flex;
+    gap: 10px;
+}
+
+.panels-control-container {
+    display: flex;
+    gap: 10px;
+}
+
+.process-control-container {
+    display: flex;
+}
+
+.process-control-container button {
+    width: 45px;
+    height: 35px;
+}
+
+.material-symbols-outlined {
+    font-size: 22px;
+    font-variation-settings: 'wght' 300, 'opsz' 24;
+}
+  
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+

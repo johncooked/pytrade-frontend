@@ -1,4 +1,5 @@
 import React from "react";
+import TitleMenu from "../Utils/TitleMenu";
 import "./Header.css";
 
 const Header = ({ theme, setTheme }) => {
@@ -7,12 +8,31 @@ const Header = ({ theme, setTheme }) => {
     };
 
     return (
-        <div className="flex-container-row">
+        <div className="header-container">
             <div className="logo-container">
                 <span>Datbot</span>
             </div>
-            <div className="titlebar-menu-container"></div>
-            <div className="panels-control-container"></div>
+
+            {/* Title Menu */}
+            <div className="titlebar-menu-container">
+                <TitleMenu />
+            </div>
+
+            {/* Toggle Control */}
+            <div className="panels-control-container">
+                <button>
+                    <span className="material-symbols-outlined">
+                        dock_to_right
+                    </span>
+                </button>
+                <button>
+                    <span className="material-symbols-outlined">
+                        dock_to_bottom
+                    </span>
+                </button>
+            </div>
+
+            {/* Theme Control */}
             <div className="theme-control-container">
                 <button onClick={toggleTheme} className="theme-toggle-button">
                     {theme === "light" ? (
@@ -26,14 +46,14 @@ const Header = ({ theme, setTheme }) => {
                     )}
                 </button>
             </div>
+
+            {/* Window Control */}
             <div className="process-control-container">
-                <button>
-                    <span className="material-symbols-outlined">minimize</span>
+                <button className="minimize-btn">
+                    <span className="material-symbols-outlined">remove</span>
                 </button>
                 <button>
-                    <span className="material-symbols-outlined">
-                        fullscreen
-                    </span>
+                    <span className="material-symbols-outlined">stop</span>
                 </button>
                 <button>
                     <span className="material-symbols-outlined">close</span>
