@@ -23,7 +23,7 @@ function App() {
             <aside>
                 <SideMenu />
             </aside>
-            <main>
+            <main className="flex-col">
                 <div className="main-agent-container">
                     <AgentPanel />
                 </div>

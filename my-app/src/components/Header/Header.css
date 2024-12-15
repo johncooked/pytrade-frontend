@@ -1,26 +1,92 @@
 header {
     background-color: var(--surface-color);
     border-bottom: 1px solid var(--border-color);
+    color: var(--surface-text-color);
 }
 
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-left: 10px;
 }
 
-.titlebar-menu-container {
-    display: flex;
-    gap: 10px;
+.header-left, .header-right {
+    gap: 30px;
+}
+
+.logo-container {
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-bar {
+    gap: 15px;
+    font-size: 15px;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item.selected {
+    background-color: var(--border-color);
+    border-radius: 15%;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    padding: 5px 5px;
+    width: 250px;
+}
+
+.menu-dropdown-item {
+    font-size: 15px;
+    font-family: inherit;
+    padding: 3px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.menu-dropdown-item:hover {
+    background: var(--primary-color);
+    border-radius: 5%;
+}
+
+.menu-item, .panels-control-container .material-symbols-outlined,
+.theme-control-container .material-symbols-outlined {
+    padding: 3px 3px;
+}
+
+.menu-item:hover, .panels-control-container .material-symbols-outlined:hover, .theme-control-container .material-symbols-outlined:hover {
+    background-color: var(--border-color);
+    border-radius: 15%;
+    color: var(--surface-text-color);
+    cursor: pointer;
+    transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 .panels-control-container {
-    display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
-.process-control-container {
-    display: flex;
+.process-control-container button:hover {
+    background-color: var(--border-color);
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.process-control-container .close-button:hover {
+    background-color: red;
+    color: white;
+    transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 .process-control-container button {
@@ -31,6 +97,7 @@ header {
 .material-symbols-outlined {
     font-size: 22px;
     font-variation-settings: 'wght' 300, 'opsz' 24;
+    color: inherit;
 }
   
 button {
@@ -38,5 +105,10 @@ button {
     align-items: center;
     justify-content: center;
     border: none;
+    background-color: transparent;
+    color: inherit;
 }
 
+span, .titlebar-menu-container {
+    color: inherit;
+}

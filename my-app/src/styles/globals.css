@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 /*default fonts*/
 * {
   margin: 0;
@@ -24,16 +26,15 @@ code {
 :root {
   --primary-color: #007AFF;
   --secondary-color: #28A745;
-  --background-color: #FFFFFF;
-  --surface-color: #F8F9FA;
-  --on-background-color: #2C3E50;
-  --on-surface-color: #2C3E50;
+  --background-color: #F8F9FA;
+  --surface-color: #FFFFFF;
+  --background-text-color: #2C3E50;
+  --surface-text-color: #2C3E50;
   --error-color: #E74C3C;
-  --on-error-color: #FFFFFF;
   --border-color: #cccccc;
 
   --font-body-light: 'Roboto', sans-serif;
-  --font-heading-light: 'Arial', sans-serif;
+  --font-heading-light: 'Montserrat', sans-serif;
   --font-button-light: 'Helvetica', sans-serif;
 
   /* Default light theme values */
@@ -46,20 +47,30 @@ code {
 [data-theme="dark"] {
   --primary-color: linear-gradient(to right, #6A1B9A, #2196F3);
   --secondary-color: #18FFFF;
-  --background-color: #181a20;
-  --surface-color: #0b0e11;
-  --on-background-color: #EAEAEA;
-  --on-surface-color: #ABB2BF;
+  --background-color: #202020;
+  --surface-color: #131111;
+  --background-text-color: #EAEAEA;
+  --surface-text-color: #97989c;
   --error-color: #E53935;
-  --on-error-color: #FFFFFF;
-  --border-color: #000000;
+  --border-color: #2b2a2a;
 
   --font-body-dark: 'Roboto', sans-serif;
-  --font-heading-dark: 'Arial', sans-serif;
+  --font-heading-dark: 'Montserrat', sans-serif;
   --font-button-dark: 'Helvetica', sans-serif;
 
   /* Default dark theme values */
   --font-body: var(--font-body-dark);
   --font-heading: var(--font-heading-dark);
   --font-button: var(--font-button-dark);
+}
+
+/* Reusable styles*/
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }

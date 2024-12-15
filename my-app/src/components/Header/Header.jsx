@@ -8,56 +8,58 @@ const Header = ({ theme, setTheme }) => {
     };
 
     return (
-        <div className="header-container">
-            <div className="logo-container">
-                <span>Datbot</span>
-            </div>
+        <div className="header-container flex-row">
+            <div className="header-left flex-row">
+                <div className="logo-container flex-row">
+                    <span>Datbot</span>
+                </div>
 
-            {/* Title Menu */}
-            <div className="titlebar-menu-container">
-                <TitleMenu />
+                {/* Title Menu */}
+                <div className="flex-row">
+                    <TitleMenu />
+                </div>
             </div>
-
-            {/* Toggle Control */}
-            <div className="panels-control-container">
-                <button>
-                    <span className="material-symbols-outlined">
-                        dock_to_right
-                    </span>
-                </button>
-                <button>
-                    <span className="material-symbols-outlined">
-                        dock_to_bottom
-                    </span>
-                </button>
-            </div>
-
-            {/* Theme Control */}
-            <div className="theme-control-container">
-                <button onClick={toggleTheme} className="theme-toggle-button">
-                    {theme === "light" ? (
+            <div className="header-right flex-row">
+                {/* Toggle Control */}
+                <div className="panels-control-container flex-row">
+                    <button className="left-panel-btn">
                         <span className="material-symbols-outlined">
-                            light_mode
+                            dock_to_right
                         </span>
-                    ) : (
+                    </button>
+                    <button className="bottom-panel-btn">
                         <span className="material-symbols-outlined">
-                            dark_mode
+                            dock_to_bottom
                         </span>
-                    )}
-                </button>
-            </div>
-
-            {/* Window Control */}
-            <div className="process-control-container">
-                <button className="minimize-btn">
-                    <span className="material-symbols-outlined">remove</span>
-                </button>
-                <button>
-                    <span className="material-symbols-outlined">stop</span>
-                </button>
-                <button>
-                    <span className="material-symbols-outlined">close</span>
-                </button>
+                    </button>
+                </div>
+                {/* Theme Control */}
+                <div className="theme-control-container flex-row">
+                    <button
+                        onClick={toggleTheme}
+                        className="theme-toggle-button"
+                    >
+                        {theme === "light" ? (
+                            <span className="material-symbols-outlined">
+                                light_mode
+                            </span>
+                        ) : (
+                            <span className="material-symbols-outlined">
+                                dark_mode
+                            </span>
+                        )}
+                    </button>
+                </div>
+                {/* Window Control */}
+                <div className="process-control-container flex-row">
+                    <button className="material-symbols-outlined">
+                        remove
+                    </button>
+                    <button className="material-symbols-outlined">stop</button>
+                    <button className="close-button material-symbols-outlined">
+                        close
+                    </button>
+                </div>
             </div>
         </div>
     );
