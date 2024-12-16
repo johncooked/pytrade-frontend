@@ -24,14 +24,14 @@ code {
 
 /* Light Theme Variables */
 :root {
-  --primary-color: #007AFF;
+  --primary-color: #60A5FA ;
   --secondary-color: #28A745;
-  --background-color: #F8F9FA;
-  --surface-color: #FFFFFF;
+  --background-color: #FFFFFF;
+  --surface-color: #F5F6F8;
   --background-text-color: #2C3E50;
   --surface-text-color: #2C3E50;
-  --error-color: #E74C3C;
-  --border-color: #cccccc;
+  --error-color: #DC2626;
+  --border-color: #D1D5DB;
 
   --font-body-light: 'Roboto', sans-serif;
   --font-heading-light: 'Montserrat', sans-serif;
@@ -45,14 +45,14 @@ code {
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
-  --primary-color: linear-gradient(to right, #6A1B9A, #2196F3);
-  --secondary-color: #18FFFF;
-  --background-color: #202020;
-  --surface-color: #131111;
-  --background-text-color: #EAEAEA;
-  --surface-text-color: #97989c;
-  --error-color: #E53935;
-  --border-color: #2b2a2a;
+  --primary-color: #5B5F66;
+  --secondary-color: #A3E635;
+  --background-color: #252525;
+  --surface-color: #1A1A1A;
+  --background-text-color: #F2F2F2;
+  --surface-text-color: #E5E5E5;
+  --error-color: #EF4444;
+  --border-color: #3C3C3C;
 
   --font-body-dark: 'Roboto', sans-serif;
   --font-heading-dark: 'Montserrat', sans-serif;

@@ -44,7 +44,7 @@ const Header = ({ theme, setTheme }) => {
                                 light_mode
                             </span>
                         ) : (
-                            <span className="material-symbols-outlined">
+                            <span className="material-symbols-outlined night-icon">
                                 dark_mode
                             </span>
                         )}
