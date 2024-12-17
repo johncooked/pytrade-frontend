@@ -79,6 +79,10 @@ header {
     gap: 5px;
 }
 
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1;
+    color: inherit;
+}
 
 /* Theme settings */
 .theme-control-container .night-icon {
@@ -104,8 +108,8 @@ header {
 
 /* Icons */
 .material-symbols-outlined {
-    font-size: 22px;
-    font-variation-settings: 'wght' 300, 'opsz' 24;
+    font-size: 20px;
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'opsz' 24;
     color: inherit;
 }
   

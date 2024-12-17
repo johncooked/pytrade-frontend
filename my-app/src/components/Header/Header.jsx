@@ -2,7 +2,14 @@ import React from "react";
 import TitleMenu from "../Utils/TitleMenu";
 import "./Header.css";
 
-const Header = ({ theme, setTheme }) => {
+const Header = ({
+    theme,
+    setTheme,
+    showSideMenu,
+    setShowSideMenu,
+    showLogsPanel,
+    setShowLogsPanel,
+}) => {
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
@@ -22,13 +29,21 @@ const Header = ({ theme, setTheme }) => {
             <div className="header-right flex-row">
                 {/* Toggle Control */}
                 <div className="panels-control-container flex-row">
-                    <button className="left-panel-btn">
-                        <span className="material-symbols-outlined">
+                    <button onClick={() => setShowSideMenu(!showSideMenu)}>
+                        <span
+                            className={`material-symbols-outlined ${
+                                showSideMenu ? "filled" : ""
+                            }`}
+                        >
                             dock_to_right
                         </span>
                     </button>
-                    <button className="bottom-panel-btn">
-                        <span className="material-symbols-outlined">
+                    <button onClick={() => setShowLogsPanel(!showLogsPanel)}>
+                        <span
+                            className={`material-symbols-outlined ${
+                                showLogsPanel ? "filled" : ""
+                            }`}
+                        >
                             dock_to_bottom
                         </span>
                     </button>

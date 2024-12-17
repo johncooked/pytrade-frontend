@@ -10,6 +10,8 @@ import "./styles/App.css";
 // App entry point, manage grid layout.
 function App() {
     const [theme, setTheme] = useState("light");
+    const [showSideMenu, setShowSideMenu] = useState(true);
+    const [showLogsPanel, setShowLogsPanel] = useState(true);
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
@@ -18,18 +20,29 @@ function App() {
     return (
         <div className="app">
             <header>
-                <Header theme={theme} setTheme={setTheme} />
+                <Header
+                    theme={theme}
+                    setTheme={setTheme}
+                    showSideMenu={showSideMenu}
+                    setShowSideMenu={setShowSideMenu}
+                    showLogsPanel={showLogsPanel}
+                    setShowLogsPanel={setShowLogsPanel}
+                />
             </header>
-            <aside>
-                <SideMenu />
-            </aside>
+            {showSideMenu && (
+                <aside>
+                    <SideMenu />
+                </aside>
+            )}
             <main className="flex-col">
                 <div className="main-agent-container">
                     <AgentPanel />
                 </div>
-                <div className="main-logs-container">
-                    <LogsPanel />
-                </div>
+                {showLogsPanel && (
+                    <div className="main-logs-container">
+                        <LogsPanel />
+                    </div>
+                )}
             </main>
             <footer>
                 <Footer />
