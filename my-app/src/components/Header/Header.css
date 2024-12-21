@@ -2,6 +2,7 @@ header {
     background-color: var(--surface-color);
     border-bottom: 1px solid var(--border-color);
     color: var(--surface-text-color);
+    font-family: var(--font-heading);
 }
 
 .header-container {
@@ -9,22 +10,25 @@ header {
     align-items: center;
     justify-content: space-between;
     padding-left: 10px;
+    -webkit-app-region: drag;
 }
 
 .header-left, .header-right {
     gap: 30px;
 }
 
-/* Logo settings */
+/* Logo Styles */
 .logo-container {
     align-items: center;
     justify-content: center;
+    -webkit-app-region: no-drag;
 }
 
-/* Menu settings */
+/* Menu Styles */
 .menu-bar {
     gap: 5px;
     font-size: 15px;
+    -webkit-app-region: no-drag;
 }
 
 .menu-item {
@@ -41,7 +45,7 @@ header {
 
 .menu-item.selected {
     background-color: var(--background-color);
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .menu-dropdown {
@@ -52,8 +56,8 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     border: 1px solid var(--border-color);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     padding: 5px 5px;
     width: 250px;
 }
@@ -65,16 +69,16 @@ header {
     cursor: pointer;
     white-space: nowrap;
     transition: background-color 0.1s;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .menu-dropdown-item:hover {
     background: var(--primary-color);
-    border-radius: 5px;
+    border-radius: 6px;
     color: #F5F6F8;
 }
 
-/* Panels settings*/
+/* Panels Styles */
 .panels-control-container {
     gap: 5px;
 }
@@ -84,12 +88,12 @@ header {
     color: inherit;
 }
 
-/* Theme settings */
+/* Theme Styles */
 .theme-control-container .night-icon {
     font-variation-settings: 'FILL' 1;
 }
 
-/* Process settings */
+/* Process Styles */
 .process-control-container button:hover {
     background-color: var(--background-color);
     transition: background-color 0.1s ease, color 0.1s ease;
@@ -104,6 +108,7 @@ header {
 .process-control-container button {
     width: 45px;
     height: 35px;
+    -webkit-app-region: no-drag;
 }
 
 /* Icons */
@@ -111,6 +116,7 @@ header {
     font-size: 20px;
     font-variation-settings: 'FILL' 0, 'wght' 300, 'opsz' 24;
     color: inherit;
+    -webkit-app-region: no-drag;
 }
   
 .panels-control-container .material-symbols-outlined,

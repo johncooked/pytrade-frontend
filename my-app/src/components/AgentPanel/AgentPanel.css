@@ -1,6 +1,105 @@
-/* AgentPanel.css */
 .agent-panel {
     height: 100%;
     background-color: var(--background-color);
-    /* Other specific styles for AgentPanel */
+    color: var(--surface-text-color);
+    font-family: var(--font-body);
+    padding: 1rem 2rem;
+}
+
+/* Header Styles */
+.agent-panel-header {
+    font-family: var(--font-heading);
+    color: var(--background-text-color);
+    gap: 2rem;
+}
+
+.header-bottom {
+    justify-content: space-between;
+}
+
+.header-bottom-start {
+    font-family: var(--font-heading);
+}
+
+.header-bottom-end {
+    gap: 1rem;
+}
+
+/* Label Styles */
+.agent-card-labels {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.agent-card-labels span {
+    align-items: center;
+    justify-content: center;
+}
+
+.agent-card-labels .material-symbols-outlined {
+    font-size: 20px;
+    flex: 1;
+}
+
+.name-label {
+    flex: 3;
+}
+
+.pair-label {
+    flex: 2;
+}
+
+.balance-label {
+    flex: 4;
+}
+
+.pl-label {
+    flex: 1;
+}
+
+.percentage-label {
+    flex: 1;
+}
+
+.status-label {
+    flex: 5;
+}
+
+/* Content Styles */
+.agent-panel-content {
+    height: 100%;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+/* No Agents Styles */
+.no-agents {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    gap: 1rem;
+}
+
+/* Agent Exists Styles */
+.agent-exists {
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    font-size: 1rem;
+}
+
+/* Others */
+button {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+u {
+    color: var(--primary-color);
 }

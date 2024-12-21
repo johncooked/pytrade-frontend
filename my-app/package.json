@@ -47,6 +47,6 @@
     "electron-builder": "^25.1.8",
     "electron-is-dev": "^3.0.1",
     "wait-on": "^8.0.1",
-    "@babel/plugin-proposal-private-property-in-object":"~7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "~7.21.11"
   }
 }

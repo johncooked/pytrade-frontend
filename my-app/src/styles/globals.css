@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /*default fonts*/
 * {
@@ -49,8 +50,8 @@ code {
   --secondary-color: #A3E635;
   --background-color: #252525;
   --surface-color: #1A1A1A;
-  --background-text-color: #F2F2F2;
-  --surface-text-color: #E5E5E5;
+  --background-text-color: #cecece;
+  --surface-text-color: #cecece;
   --error-color: #EF4444;
   --border-color: #3C3C3C;
 
