@@ -1,14 +1,57 @@
 import React, { useState } from "react";
 import "./AgentPanel.css";
+import AgentCard from "../AgentCard/AgentCard";
 
 const AgentPanel = () => {
-    const [agents, setAgents] = useState([]);
+    const [agents, setAgents] = useState([
+        {
+            id: 1,
+            tradingPair: "BTC/USD",
+            marketPrice: { base: "$50,000", quote: "1 BTC" },
+            balance: { base: "$1,000", quote: "0.02 BTC" },
+            profitLoss: { percentage: "+5%", money: "$50" },
+            status: "Active",
+        },
+        {
+            id: 2,
+            tradingPair: "ETH/USD",
+            marketPrice: { base: "$4,000", quote: "1 ETH" },
+            balance: { base: "$500", quote: "0.125 ETH" },
+            profitLoss: { percentage: "-2%", money: "-$10" },
+            status: "Inactive",
+        },
+    ]);
+
+    const handlePowerToggle = (id) => {
+        setAgents(
+            agents.map((agent) =>
+                agent.id === id
+                    ? {
+                          ...agent,
+                          status:
+                              agent.status === "Active" ? "Inactive" : "Active",
+                      }
+                    : agent
+            )
+        );
+    };
+
+    const handleEdit = (id) => {
+        alert(`Edit agent with ID: ${id}`);
+    };
+
+    const handleDelete = (id) => {
+        setAgents(agents.filter((agent) => agent.id !== id));
+    };
 
     const handleAddAgent = () => {
-        // Add a new agent (this is just a placeholder for demonstration)
         const newAgent = {
             id: agents.length + 1,
-            name: `Agent ${agents.length + 1}`,
+            tradingPair: "New Pair",
+            marketPrice: { base: "$0", quote: "0 Units" },
+            balance: { base: "$0", quote: "0 Units" },
+            profitLoss: { percentage: "0%", money: "$0" },
+            status: "Inactive",
         };
         setAgents([...agents, newAgent]);
     };
@@ -33,27 +76,34 @@ const AgentPanel = () => {
                 </div>
             </div>
             <div className="agent-card-labels flex-row">
-                <span className="material-symbols-outlined">
-                    check_box_outline_blank
-                </span>
-                <span className="name-label">
-                    <b>Name</b>
-                </span>
-                <span className="pair-label">
-                    <b>Trading Pair</b>
-                </span>
-                <span className="balance-label">
-                    <b>Balance</b>
-                </span>
-                <span className="pl-label">
-                    <b>P/L</b>
-                </span>
-                <span className="percentage-label">
-                    <b>24h%</b>
-                </span>
-                <span className="status-label">
-                    <b>Status</b>
-                </span>
+                <div className="flex-row">
+                    <input type="checkbox" className="checkbox" />
+                </div>
+                <div className="pair-label flex-row">
+                    <span>
+                        <b>Pair</b>
+                    </span>
+                </div>
+                <div className="balance-label flex-row">
+                    <span>
+                        <b>Balance</b>
+                    </span>
+                </div>
+                <div className="pl-label flex-row">
+                    <span>
+                        <b>P/L</b>
+                    </span>
+                </div>
+                <div className="percentage-label flex-row">
+                    <span>
+                        <b>24h%</b>
+                    </span>
+                </div>
+                <div className="status-label flex-row">
+                    <span>
+                        <b>Status</b>
+                    </span>
+                </div>
             </div>
             {agents.length === 0 ? (
                 <div className="agent-panel-content no-agents flex-col">
@@ -66,12 +116,16 @@ const AgentPanel = () => {
                 </div>
             ) : (
                 <div className="agent-panel-content agent-exists flex-col">
-                    <div className="agents-list">
-                        <ul>
-                            {agents.map((agent) => (
-                                <li key={agent.id}>{agent.name}</li>
-                            ))}
-                        </ul>
+                    <div className="agent-list">
+                        {agents.map((agent) => (
+                            <AgentCard
+                                key={agent.id}
+                                agent={agent}
+                                onPowerToggle={handlePowerToggle}
+                                onEdit={handleEdit}
+                                onDelete={handleDelete}
+                            />
+                        ))}
                     </div>
                     <div className="agent-btn-container">
                         <button

@@ -1,6 +1,6 @@
 .side-menu {
     height: 100%;
-    width: 200px;
+    width: 50px;
     overflow: hidden;
     background-color: var(--surface-color);
     border-right: 1px solid var(--border-color);

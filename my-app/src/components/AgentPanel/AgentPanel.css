@@ -33,40 +33,37 @@
     padding-bottom: 0.5rem;
     align-items: center;
     justify-content: center;
-}
-
-.agent-card-labels span {
-    align-items: center;
-    justify-content: center;
-}
-
-.agent-card-labels .material-symbols-outlined {
-    font-size: 20px;
-    flex: 1;
-}
-
-.name-label {
-    flex: 3;
+    gap: 2rem;
 }
 
 .pair-label {
     flex: 2;
+    align-items: center;
+    justify-content: center;
 }
 
 .balance-label {
-    flex: 4;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
 }
 
 .pl-label {
-    flex: 1;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
 }
 
 .percentage-label {
-    flex: 1;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
 }
 
 .status-label {
     flex: 5;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Content Styles */
@@ -93,6 +90,12 @@
     font-size: 1rem;
 }
 
+/* Agent List Styles */
+.agent-list {
+    width: 100%;
+    font-size: 1rem;
+}
+
 /* Others */
 button {
     font-size: 1rem;
@@ -102,4 +105,8 @@ button {
 
 u {
     color: var(--primary-color);
+}
+
+.align-center {
+    
 }

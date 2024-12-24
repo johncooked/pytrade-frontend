@@ -1,0 +1,49 @@
+
+.agent-card {
+   background-color: var(--surface-color);
+   font-family: var(--font-body);
+   color: var(--surface-text-color);
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   gap: 2rem;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   border-top: 1px solid var(--border-color);
+}
+
+.agent-card:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: var(--background-color);
+}
+
+.agent-card .checkbox {
+    flex: 1;
+    visibility: hidden;
+}
+
+.agent-card:hover .checkbox {
+    visibility: visible;
+}
+
+.agent-pair {
+    flex: 2;
+}
+
+.agent-balance {
+    flex: 3;
+}
+
+.agent-pl {
+    flex: 3;
+}
+
+.agent-percentage {
+    flex: 2;
+}
+
+.agent-status {
+    flex: 5;
+}
+
+/* Others */
