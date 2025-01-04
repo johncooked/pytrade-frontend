@@ -1,49 +1,152 @@
 
 .agent-card {
-   background-color: var(--surface-color);
+   position: relative;
+   background-color: var(--background-color);
    font-family: var(--font-body);
    color: var(--surface-text-color);
    align-items: center;
-   justify-content: center;
-   width: 100%;
-   gap: 2rem;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
-   border-top: 1px solid var(--border-color);
+   gap: 5rem;
+   padding-top: 0.6rem;
+   padding-bottom: 0.6rem;
 }
 
 .agent-card:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    background-color: var(--background-color);
+    background-color: var(--surface-color);
 }
 
-.agent-card .checkbox {
-    flex: 1;
-    visibility: hidden;
-}
-
-.agent-card:hover .checkbox {
-    visibility: visible;
+.agent-card > .agent-pair, .agent-balance, .agent-status {
+    align-items: start;
+    justify-content: start;
+    box-sizing: border-box;
 }
 
 .agent-pair {
-    flex: 2;
+    width: 6rem;
 }
 
 .agent-balance {
-    flex: 3;
+    width: 12rem;
 }
 
 .agent-pl {
-    flex: 3;
+    width: 4rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .agent-percentage {
-    flex: 2;
+    width: 4rem; 
+    align-items: center;
+    justify-content: center;
 }
 
 .agent-status {
-    flex: 5;
+    flex-grow: 1; 
+    text-align: left; 
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Styling for the checkbox */
+.checkbox {
+    margin-left: 1rem;
+    appearance: none; 
+    -webkit-appearance: none; 
+    width: 1rem;
+    height: 1rem;
+    background: var(--background-color); 
+    border: 2px solid var(--border-color); 
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+}
+
+.checkbox:hover {
+    border-color: var(--surface-text-color); 
+}
+
+.checkbox:checked {
+    background-color: var(--primary-color); 
+    border-color: var(--primary-color); 
+    position: relative;
+}
+
+.checkbox:checked::after {
+    content: '\2714'; 
+    display: block;
+    color: var(--surface-color); 
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.agent-card:hover .agent-actions {
+    visibility: visible; /* Actions become visible on hover */
+}
+
+.agent-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: absolute;
+    right: 1rem; /* Push to the right of the card */
+    visibility: hidden; /* Hidden by default */
+    width: 8rem; /* Fixed width like other items */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agent-actions button {
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color); 
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.agent-actions button:hover {
+    background-color: var(--border-color); 
+}
+
+.agent-actions button:hover .material-symbols-outlined {
+    color: var(--surface-text-color); 
+}
+
+.agent-actions .material-symbols-outlined {
+    font-size: 20px; /* Adjust icon size */
+    color: var(--border-color); /* Icon color */
+}
+
+/* Status Light Styling */
+.status-light {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+/* Status Colors */
+.green-light {
+    background-color: #28a745; /* Active task */
+}
+
+.yellow-light {
+    background-color: #ffc107; /* Idle task */
+}
+
+.red-light {
+    background-color: #dc3545; /* Inactive or Error */
+}
+
+.grey-light {
+    background-color: #6c757d; /* Unknown task */
 }
 
 /* Others */

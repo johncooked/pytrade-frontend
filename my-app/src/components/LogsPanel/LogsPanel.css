@@ -1,12 +1,53 @@
 .logs-panel {
     height: 100%;
-    overflow-y: auto;
-    background: var(--background-color);
+    background: var(--surface-color);
     border-top: 1px solid var(--border-color);
     /* Other specific styles for LogsPanel */
 }
 
+.logs-panel-menu {
+    padding-left: 1.5rem;
+    gap: 1rem;
+}
+
+.logs-panel-menu button span{
+    font-family: var(--font-heading);
+    color: var(--surface-text-color);
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
+.logs-panel-menu button:hover {
+    font-weight: bold;
+  }
+  
+.logs-panel-menu button.active span {
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary-color);
+}
+
 .logs-panel-content {
-    height: 100%;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    height: 20rem;
     background-color: var(--surface-color);
+    overflow-y: auto;
+}
+
+.log-entry {
+    margin-bottom: 0.4rem;
+}
+  
+.log-datetime {
+    font-weight: bold;
+    color: var(--surface-text-color);
+}
+  
+.log-pair {
+    color: var(--surface-text-color);
+}
+  
+.log-message {
+    padding-left: 0.5rem;
+    color: var(--surface-text-color);
 }

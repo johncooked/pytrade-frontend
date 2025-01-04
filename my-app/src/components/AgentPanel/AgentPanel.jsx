@@ -6,19 +6,24 @@ const AgentPanel = () => {
     const [agents, setAgents] = useState([
         {
             id: 1,
-            tradingPair: "BTC/USD",
-            marketPrice: { base: "$50,000", quote: "1 BTC" },
+            tradingPair: "BTC/UDST",
             balance: { base: "$1,000", quote: "0.02 BTC" },
-            profitLoss: { percentage: "+5%", money: "$50" },
-            status: "Active",
+            profitLoss: { percentage: "+5%", money: "+$50" },
+            task: "Calculating optimal entry price...",
         },
         {
             id: 2,
-            tradingPair: "ETH/USD",
-            marketPrice: { base: "$4,000", quote: "1 ETH" },
+            tradingPair: "ETH/UDST",
             balance: { base: "$500", quote: "0.125 ETH" },
             profitLoss: { percentage: "-2%", money: "-$10" },
-            status: "Inactive",
+            task: "Waiting for order to be filled...",
+        },
+        {
+            id: 3,
+            tradingPair: "LTC/USDT",
+            balance: { base: "$200", quote: "0.05 LTC" },
+            profitLoss: { percentage: "-10%", money: "-$20" },
+            task: "Switched off.",
         },
     ]);
 
@@ -48,10 +53,9 @@ const AgentPanel = () => {
         const newAgent = {
             id: agents.length + 1,
             tradingPair: "New Pair",
-            marketPrice: { base: "$0", quote: "0 Units" },
             balance: { base: "$0", quote: "0 Units" },
             profitLoss: { percentage: "0%", money: "$0" },
-            status: "Inactive",
+            task: "Inactive",
         };
         setAgents([...agents, newAgent]);
     };
@@ -67,11 +71,26 @@ const AgentPanel = () => {
                         Total Balance: $0
                     </div>
                     <div className="header-bottom-end flex-row">
-                        <span className="material-symbols-outlined">
-                            delete
-                        </span>
-                        <span className="material-symbols-outlined">edit</span>
-                        <span className="material-symbols-outlined">add</span>
+                        <button>
+                            <span className="material-symbols-outlined">
+                                power_settings_circle
+                            </span>
+                        </button>
+                        <button>
+                            <span className="material-symbols-outlined">
+                                delete
+                            </span>
+                        </button>
+                        <button>
+                            <span className="material-symbols-outlined">
+                                edit
+                            </span>
+                        </button>
+                        <button onClick={handleAddAgent}>
+                            <span className="material-symbols-outlined">
+                                add
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -126,14 +145,6 @@ const AgentPanel = () => {
                                 onDelete={handleDelete}
                             />
                         ))}
-                    </div>
-                    <div className="agent-btn-container">
-                        <button
-                            className="add-agent-btn"
-                            onClick={handleAddAgent}
-                        >
-                            + Create new
-                        </button>
                     </div>
                 </div>
             )}

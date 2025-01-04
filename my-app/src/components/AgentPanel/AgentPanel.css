@@ -3,7 +3,9 @@
     background-color: var(--background-color);
     color: var(--surface-text-color);
     font-family: var(--font-body);
-    padding: 1rem 2rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
 }
 
 /* Header Styles */
@@ -25,45 +27,61 @@
     gap: 1rem;
 }
 
+/* Action Buttons */
+.header-bottom-end button {
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-text-color); 
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.header-bottom-end button:hover {
+    background-color: var(--border-color); 
+}
+
 /* Label Styles */
 .agent-card-labels {
     font-family: var(--font-heading);
-    font-size: 15px;
+    font-size: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
+}
+
+.agent-card-labels > .pair-label, .balance-label, .status-label {
+    align-items: start;
+    justify-content: start;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .pair-label {
-    flex: 2;
-    align-items: center;
-    justify-content: center;
+    width: 6rem;
 }
 
 .balance-label {
-    flex: 3;
-    align-items: center;
-    justify-content: center;
+    width: 12rem;
 }
 
 .pl-label {
-    flex: 3;
+    width: 4rem;
     align-items: center;
     justify-content: center;
 }
 
 .percentage-label {
-    flex: 2;
+    width: 4rem; 
     align-items: center;
     justify-content: center;
 }
 
 .status-label {
-    flex: 5;
-    align-items: center;
-    justify-content: center;
+    flex-grow: 1; 
+    text-align: left; 
 }
 
 /* Content Styles */
@@ -84,10 +102,12 @@
 
 /* Agent Exists Styles */
 .agent-exists {
+    height: 100%;
     width: 100%;
     align-items: center;
     justify-content: start;
     font-size: 1rem;
+    overflow-y: auto;
 }
 
 /* Agent List Styles */
@@ -100,13 +120,8 @@
 button {
     font-size: 1rem;
     cursor: pointer;
-    padding: 0.5rem;
 }
 
 u {
     color: var(--primary-color);
-}
-
-.align-center {
-    
 }
