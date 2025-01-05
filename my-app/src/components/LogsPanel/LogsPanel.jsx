@@ -70,7 +70,7 @@ const LogsPanel = () => {
                 {filteredLogs.map((log, index) => (
                     <div key={index} className="log-entry">
                         <span className="log-datetime">{log.datetime}</span>
-                        <span className="log-pair"> -{log.pair}:</span>
+                        <span className="log-pair"> - {log.pair}:</span>
                         <span className="log-message">{log.message}</span>
                     </div>
                 ))}
